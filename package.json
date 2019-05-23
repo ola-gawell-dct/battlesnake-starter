@@ -1,0 +1,71 @@
+{
+  "name": "battlesnake-node",
+  "description": "A simple BattleSnake AI written in Javascript for NodeJS",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Sendwithus",
+  "repository": "https://github.com/sendwithus/battlesnake-node",
+  "licenses": [
+    {
+      "type": "WTFPL",
+      "url": "http://www.wtfpl.net/txt/copying/"
+    }
+  ],
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.17.1"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=10.x"
+  },
+  "scripts": {
+    "start": "cross-env PORT=5000 nodemon index.js",
+    "test": "mocha './{,!(node_modules)/**/}*.test.js'"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "mocha": true
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "no-console": 0,
+      "prettier/prettier": [
+        "error"
+      ],
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "h"
+        }
+      ],
+      "valid-jsdoc": [
+        "warn",
+        {
+          "requireParamDescription": false,
+          "requireReturnDescription": false
+        }
+      ]
+    }
+  }
+}

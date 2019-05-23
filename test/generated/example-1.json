@@ -1,0 +1,5 @@
+{
+  "board": ["O  . ", "A    ", "A    ", "     ", "     "],
+  "name": "example-1",
+  "acceptedOutcomes": ["right"]
+}
